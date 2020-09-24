@@ -2,9 +2,9 @@
   <div class="app-header">
     <span class="app-header__title"> Buscador películas imdb </span>
     <div class="app-header__nav">
-      <a class="app-header__link" href="#" @click.prevent="goTo()"> Home </a>
-      <a class="app-header__link" href="#" @click.prevent="goTo()"> Contacto </a>
-      <a class="app-header__link" href="#" @click.prevent="goTo()"> Legal </a>
+      <router-link class="app-header__link" to='/'> Home </router-link>
+      <router-link class="app-header__link" to='/contacto'> Contacto </router-link>
+      <router-link class="app-header__link" to='/legal'> Legal </router-link>
     </div>
   </div>
 </template>

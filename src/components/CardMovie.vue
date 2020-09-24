@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <md-card class="card">
+  <div @click="goToDetail">
+    <md-card 
+      class="card">
       <md-card-media>
         <img :src="movie.Poster" alt="movie">
       </md-card-media>
@@ -21,6 +22,17 @@ export default {
       type: Object,
       default: () => {}
     }
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push(
+        {
+          name: 'Detail', 
+          params: {
+            idmovie: this.movie.imdbID
+          } 
+        }) 
+    }
   }
 }
 </script>
@@ -28,5 +40,6 @@ export default {
 <style scoped>
  .card {
     width: 300px;
+    cursor: pointer;
  }
 </style>

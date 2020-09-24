@@ -12,7 +12,6 @@
 <script>
 import Seacher from '@/components/Seacher'
 import ListMovies from '@/components/ListMovies'
-
 export default {
   name: 'Home',
   components: {

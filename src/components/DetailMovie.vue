@@ -1,5 +1,7 @@
 <template>
-  <div class="detail-movie">
+  <div 
+    v-if="movie"
+    class="detail-movie">
     <div class="detail-movie__container">
       <md-card class="detail-movie__container__card">
         <md-card-media>
@@ -41,7 +43,7 @@
 export default {
   name: 'DetailMovie',
   created() {
-    const idMovie = 'tt2975590'
+    const idMovie = this.$route.params.idmovie
     const API_KEY = process.env.VUE_APP_API_KEY
     fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${idMovie}`)
     .then(data => data.json())
@@ -51,12 +53,15 @@ export default {
   },
   data() {
     return {
-      movie: {}
+      movie: null
     }
   }
 }
 </script>
 <style scoped>
+  .detail-movie {
+    padding: 20px
+  }
   .detail-movie__container {
     display: flex;
   }
