@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Contacto from '../components/Contacto'
-import Legal from '../components/Legal'
-import DetailMovie from '../components/DetailMovie'
+import Contacto from '../views/Contacto'
+import Legal from '../views/Legal'
+import DetailMovie from '../views/DetailMovie'
 
 Vue.use(VueRouter)
 
